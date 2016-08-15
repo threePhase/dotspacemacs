@@ -29,7 +29,7 @@ values."
      emacs-lisp
      fsharp
      git
-     ;; markdown
+     markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -245,14 +245,15 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  (setq tab-width 2)
-  (setq elm-indent-offset 2)
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq tab-width 2)
+  (setq elm-indent-offset 2)
+  (setq-default fill-column 80)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
