@@ -34,6 +34,9 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
+     (rcirc :variables
+            rcirc-enable-authinfo-support t
+            rcirc-enable-znc-support t)
      spell-checking
      syntax-checking
      ;; version-control
@@ -254,7 +257,14 @@ you should place your code here."
   (setq tab-width 2)
   (setq elm-indent-offset 2)
   (setq-default fill-column 80)
-  )
+  (setq rcirc-config "~/.dotspacemacs.private/rcirc.config")
+  (condition-case error
+    (progn
+      (load-file rcirc-config)
+      (message "Loaded local rcirc configuration"))
+    (file-error
+      (message (concatenate 'string "Skipping " rcirc-config)))
+    nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
