@@ -35,7 +35,6 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      (rcirc :variables
-            rcirc-enable-authinfo-support t
             rcirc-enable-znc-support t)
      spell-checking
      syntax-checking
