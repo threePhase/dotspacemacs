@@ -258,12 +258,15 @@ you should place your code here."
   (setq elm-indent-offset 2)
   (setq-default fill-column 80)
   (setq rcirc-config "~/.dotspacemacs.private/rcirc.config")
+  (load-config-file rcirc-config))
+
+(defun load-config-file (file-name)
   (condition-case error
-    (progn
-      (load-file rcirc-config)
-      (message "Loaded local rcirc configuration"))
+      (progn
+        (load-file file-name)
+        (message (concatenate 'string "Loaded " file-name)))
     (file-error
-      (message (concatenate 'string "Skipping " rcirc-config)))
+     (message (concatenate 'string "Skipping " file-name)))
     nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
