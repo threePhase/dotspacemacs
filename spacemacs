@@ -258,6 +258,9 @@ you should place your code here."
   (setq elm-indent-offset 2)
   (setq-default fill-column 80)
   (setq rcirc-config "~/.dotspacemacs.private/rcirc.config")
+  ;; macOS powerline separator color issue fix:
+  ;; https://github.com/syl20bnr/spacemacs#macos
+  (setq powerline-default-separator 'utf-8)
   (load-config-file rcirc-config))
 
 (defun load-config-file (file-name)
