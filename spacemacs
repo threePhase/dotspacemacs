@@ -29,6 +29,7 @@ values."
      emacs-lisp
      fsharp
      git
+     haskell
      markdown
      ;; org
      (rcirc :variables
