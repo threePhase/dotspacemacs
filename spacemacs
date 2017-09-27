@@ -250,6 +250,9 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq gnutls-trustfiles '("/usr/local/etc/openssl/certs/cert.pem"
+                            "/usr/local/etc/openssl/certs/nyx_systems_web_ca.pem"))
+
   )
 
 (defun dotspacemacs/user-config ()
